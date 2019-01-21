@@ -11,11 +11,15 @@
   %li
     ISBN:
     = @book.isbn
+  %li
+    Author:
+    = @book.author
 
 %h3 Description:
 
 %p#description= @book.description
 
-= link_to 'Edit info', edit_book_path(@book)
-= link_to 'Delete', book_path(@book), :method => :delete
-= link_to 'Back to book list', books_path
+= link_to 'Edit book', edit_book_path(@book)
+= link_to 'Find Books With Same Author', search_similar_books_url(id: @book.id)
+= link_to 'Delete book', book_path(@book), :method => :delete
+= link_to 'Go back to listing', books_path

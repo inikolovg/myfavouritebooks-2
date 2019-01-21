@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 20190111211225) do
     t.string "genre"
     t.text "description"
     t.string "isbn"
+    t.string "author"
     t.datetime "publish_date"
     t.datetime "created_at"
     t.datetime "updated_at"
